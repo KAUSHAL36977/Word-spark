@@ -1,0 +1,72 @@
+{
+  "name": "Word",
+  "type": "object",
+  "properties": {
+    "word": {
+      "type": "string",
+      "description": "The vocabulary word"
+    },
+    "definition": {
+      "type": "string",
+      "description": "Definition of the word"
+    },
+    "example": {
+      "type": "string",
+      "description": "Example sentence using the word"
+    },
+    "synonyms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of synonyms"
+    },
+    "antonyms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of antonyms"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "intermediate",
+      "description": "Difficulty level"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "general",
+        "academic",
+        "business",
+        "science",
+        "literature"
+      ],
+      "default": "general",
+      "description": "Word category"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the word is marked as favorite"
+    },
+    "etymology": {
+      "type": "string",
+      "description": "The origin and history of the word"
+    },
+    "is_learned": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the user has marked the word as learned"
+    }
+  },
+  "required": [
+    "word",
+    "definition"
+  ]
+}
